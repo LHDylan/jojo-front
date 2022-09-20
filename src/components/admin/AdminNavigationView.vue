@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer v-model="drawer" app>
-    <v-sheet color="grey lighten-4" class="pa-4">
+    <v-sheet class="pa-4">
       <v-avatar class="mb-4" color="grey darken-1" size="64"></v-avatar>
 
       <div>Dashboard</div>
@@ -37,3 +37,26 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+/* head navigation */
+.v-navigation-drawer__content .theme--light.v-sheet {
+  background-color: #3b4c68 !important;
+  color: #fff;
+}
+
+/* background */
+.v-navigation-drawer__content {
+  background-color: #3b4c68 !important
+}
+
+/* text color */
+.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+  color: #fff;
+}
+
+/* icon */
+.theme--light.v-icon {
+  color: #fff;
+}
+</style>

@@ -26,3 +26,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.theme--light.v-btn {
+  color: #fff;
+}
+</style>

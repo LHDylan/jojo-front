@@ -1,8 +1,8 @@
 <template>
   <v-container class="py-8 px-6" fluid>
     <v-row>
-      <v-col v-for="personnage in personnages" :key="personnage.name" cols="12">
-        <cardView :name />
+      <v-col v-for="number in numbers" :key="number" cols="12">
+        <cardView />
       </v-col>
     </v-row>
   </v-container>
@@ -20,8 +20,11 @@ export default {
     cardView,
   },
   data: () => ({
-    personnages: [],
+    // personnages: [],
+    numbers: 10,
   }),
+  computed: {
+  },
   methods: {
     async fetchAllPersonnages() {
       const AllPersonnages = await axios.get(VUE_APP_JOJO_API);

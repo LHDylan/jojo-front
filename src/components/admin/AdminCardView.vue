@@ -9,8 +9,18 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title></v-list-item-title>
-
+            <v-row>
+              <v-col cols="6">
+                <v-list-item-title>name : </v-list-item-title>
+                <v-list-item-title>stand :</v-list-item-title>
+                <v-list-item-title>birthday :</v-list-item-title>
+              </v-col>
+              <v-col cols="6">
+                <v-list-item-title>gender :</v-list-item-title>
+                <v-list-item-title>weight :</v-list-item-title>
+                <v-list-item-title>height :</v-list-item-title>
+              </v-col>
+            </v-row>
             <v-list-item-subtitle>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique
             </v-list-item-subtitle>
@@ -45,3 +55,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-list-item__title {
+  color: #000000;
+}
+</style>
