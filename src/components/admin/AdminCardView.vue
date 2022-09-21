@@ -11,19 +11,22 @@
           <v-list-item-content>
             <v-row>
               <v-col cols="6">
-                <v-list-item-title>name : </v-list-item-title>
-                <v-list-item-title>stand :</v-list-item-title>
-                <v-list-item-title>birthday :</v-list-item-title>
+                <v-list-item-title>name : {{personnage.name}}</v-list-item-title>
+                <v-list-item-title>stand : {{personnage.stand}}</v-list-item-title>
+                <v-list-item-title>birthday : {{personnage.birthday}}</v-list-item-title>
               </v-col>
               <v-col cols="6">
-                <v-list-item-title>gender :</v-list-item-title>
-                <v-list-item-title>weight :</v-list-item-title>
-                <v-list-item-title>height :</v-list-item-title>
+                <v-list-item-title>gender : {{personnage.gender}}</v-list-item-title>
+                <v-list-item-title>weight : {{personnage.weight}} kg</v-list-item-title>
+                <v-list-item-title>height : {{personnage.height}} cm</v-list-item-title>
               </v-col>
             </v-row>
-            <v-list-item-subtitle>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique
-            </v-list-item-subtitle>
+            <v-list-item>
+              {{personnage.anime}}
+            </v-list-item>
+            <v-list-item>
+              {{personnage.description}}
+            </v-list-item>
           </v-list-item-content>
         </v-list-item>
 
@@ -34,25 +37,20 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 
-const VUE_APP_JOJO_API = 'http://localhost:8000/api/personnages';
+// const VUE_APP_JOJO_API = 'http://localhost:8000/api/personnages';
 
 export default {
   name: 'AdminCardView',
-  data: () => ({
-    personnage: [],
-  }),
-  methods: {
-    async fetchAllPersonnages() {
-      const AllPersonnages = await axios.get(VUE_APP_JOJO_API);
-      console.log(AllPersonnages);
-      this.personnages = AllPersonnages.data;
+  props: {
+    personnage: {
+      type: Object,
     },
   },
-  async created() {
-    await this.fetchAllPersonnages();
-  },
+  data: () => ({
+    // personnage: [],
+  }),
 };
 </script>
 

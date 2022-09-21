@@ -31,10 +31,10 @@ export default {
 }
 
 /* main */
-.v-main__wrap {
-  /* background-color: #ededed !important */
-  background-color: #010100 !important
-}
+/* .v-main__wrap { */
+/* background-color: #ededed !important */
+/* background-color: #010100 !important */
+/* } */
 
 /* footer */
 footer {

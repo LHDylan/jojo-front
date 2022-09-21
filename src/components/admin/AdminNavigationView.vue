@@ -15,7 +15,7 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>{{ text }}</v-list-item-title>
+          <v-btn to="/add-personnage">{{ text }}</v-btn>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -29,10 +29,7 @@ export default {
     cards: ['Today', 'Yesterday'],
     drawer: null,
     links: [
-      ['mdi-inbox-arrow-down', 'Inbox'],
-      ['mdi-send', 'Send'],
-      ['mdi-delete', 'Trash'],
-      ['mdi-alert-octagon', 'Spam'],
+      ['mdi-inbox-arrow-down', 'Add a new one'],
     ],
   }),
 };
